@@ -43,11 +43,12 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+
       - name: Install dependencies
         run: yarn --immutable
 
       - name: Build
-        run: yarn workspace @connext/nxtp-contracts build
+        run: pwd && ls && yarn workspace @connext/nxtp-contracts build
 
       - name: Test
         run: cd packages/contracts && slither . --ignore-compile --filter-paths "node_modules" --print human-summary

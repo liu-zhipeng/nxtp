@@ -48,7 +48,7 @@ jobs:
         run: yarn --immutable
 
       - name: Build
-        run: pwd && ls && yarn workspace @connext/nxtp-contracts build
+        run: pwd && ls && yarn build:all
 
       - name: Test
         run: cd packages/contracts && slither . --ignore-compile --filter-paths "node_modules" --print human-summary

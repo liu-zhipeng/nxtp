@@ -75,4 +75,4 @@ jobs:
         run: yarn workspace @connext/nxtp-contracts build
 
       - name: Test
-        run: cd packages/contracts && slither contracts/TransactionManager.sol --ignore-compile --print human-summary
+        run: cd packages/contracts && slither . --print human-summary

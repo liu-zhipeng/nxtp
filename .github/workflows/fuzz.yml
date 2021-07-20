@@ -66,4 +66,4 @@ jobs:
         run: yarn workspace @connext/nxtp-contracts build
 
       - name: Test
-        run: cd packages/contracts && slither . --ignore-compile --filter-paths "node_modules/**,dist/**,typechain/**,@openzeppelin" --print human-summary
+        run: cd packages/contracts && slither . --ignore-compile --print human-summary
